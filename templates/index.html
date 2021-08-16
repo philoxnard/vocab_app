@@ -1,14 +1,7 @@
-<html>
-    <head>
-        <script
-        src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-        crossorigin="anonymous"></script>
-        <script src="../static/js/test.js"></script>
-    </head>
-    <body>
-        <p class='testclass'>this is index.html</p>
-        <button onclick="test()">Upload vocab table</button>
-        <button>Download vocab table</button>
-    </body>
-</html>
+{% extends "layout.html" %}
+{% block content %}
+<p class='testclass'>this is the landing page</p>
+<p>CSS doc is set up for use.</p>
+<p>Should set up a login page, a session page, and exercise page, a report page, and a profile page</p>
+<p>admin page is </p>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+<p class='testclass'>this is the admin page</p>
+<button onclick="test()">Upload vocab table</button>
+<button onclick="ajaxtest()">Download vocab table</button>
+{% if admin %}
+    <p>you're an admin</p>
+{% else %}
+    <p>you're not an admin</p>
+{% endif %}
+{% endblock %}
