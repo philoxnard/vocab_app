@@ -4,3 +4,4 @@
 name: vocab_app
 dependencies:
   # Python packages go here
+  flask
