@@ -1,5 +1,5 @@
 from json import *
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 app.secret_key = 'vnkdjnfjknfl1232#'
@@ -22,15 +22,15 @@ def notadmin():
 def ajax_receive():
     try:
         data = request.data
-        string = str(data, "UTF-8")
-        json = loads(string)
+        json = loads(data)
         # Here we'll have a handler function that takes json and unpacks it according to its command.
         # that handler function will then send some response back that gets returned here.
         # The app might not actually be complex enough to warrant this, but I wanted to practice
         # setting up an ajax sender/receiver/handler framework
         print(json)
+        print(json["command"])
         dump = dumps(json)
-        return dumps(dump)
+        return dumps(json)
     except ValueError:
         return render_template('error.html')
 

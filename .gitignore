@@ -1,2 +1,5 @@
 .idea
 db/database.db
+
+gitignore/PAT
+__pycache__/
